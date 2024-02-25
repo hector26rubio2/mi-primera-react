@@ -1,4 +1,7 @@
 import { Card } from './Card';
+import Counter from './Counter';
+import { useLayoutEffectExamplo } from './EjemploHooks';
+import Form from './Form';
 
 const cards = [
   {
@@ -25,20 +28,13 @@ const cards = [
 ];
 
 const App = () => {
-  const action = (message) => {
-    alert(message);
-  };
   return (
     <>
-      <h1 className="harri">Artículos</h1>
-
+      <h1>Formulario</h1>
       <hr />
 
       <hr />
-
-      {cards.map((card) => (
-        <Card key={card.id} {...card} action={action} />
-      ))}
+      <useLayoutEffectExamplo />
     </>
   );
 };
